@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "tape test/test.js && standard",
-    "prepublish": "in-publish && npm run build && npm test || not-in-publish",
+    "prepublish": "in-publish && npm test || not-in-publish",
     "coverage": "nyc --reporter text --reporter lcov tape test/test.js"
   },
   "repository": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/rexxars/load-source-map#readme",
   "dependencies": {
-    "debug": "^2.6.1",
     "in-publish": "^2.0.0",
     "semver": "^5.3.0",
     "source-map": "^0.5.6"
