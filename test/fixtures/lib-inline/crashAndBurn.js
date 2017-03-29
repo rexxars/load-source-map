@@ -1,0 +1,6 @@
+'use strict';
+
+var _generateError = require('./util/generateError');
+
+module.exports = _generateError.generateError;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9jcmFzaEFuZEJ1cm4uanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7QUFFQUEsT0FBT0MsT0FBUCIsImZpbGUiOiJjcmFzaEFuZEJ1cm4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2dlbmVyYXRlRXJyb3J9IGZyb20gJy4vdXRpbC9nZW5lcmF0ZUVycm9yJ1xuXG5tb2R1bGUuZXhwb3J0cyA9IGdlbmVyYXRlRXJyb3JcbiJdfQ==

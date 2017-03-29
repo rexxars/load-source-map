@@ -1,0 +1,47 @@
+{
+  "name": "load-source-map",
+  "version": "0.0.1",
+  "description": "Reads a source file and extracts a sourcemap for consumption (inline or external)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "tape test/test.js && standard",
+    "prepublish": "in-publish && npm run build && npm test || not-in-publish",
+    "coverage": "nyc --reporter text --reporter lcov tape test/test.js",
+    "build": "npm run build-fixtures && npm run build-inline-fixtures",
+    "build-fixtures": "babel test/fixtures/src -d test/fixtures/lib --source-maps",
+    "build-inline-fixtures": "babel test/fixtures/src -d test/fixtures/lib-inline --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rexxars/load-source-map.git"
+  },
+  "keywords": [
+    "sourcemap",
+    "stacktrace"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/load-source-map/issues"
+  },
+  "homepage": "https://github.com/rexxars/load-source-map#readme",
+  "dependencies": {
+    "debug": "^2.6.1",
+    "in-publish": "^2.0.0",
+    "semver": "^5.3.0",
+    "source-map": "^0.5.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "nyc": "^10.2.0",
+    "standard": "^9.0.2",
+    "tape": "^4.6.3"
+  },
+  "standard": {
+    "ignore": [
+      "/test/fixtures/lib/",
+      "/test/fixtures/lib-inline/"
+    ]
+  }
+}

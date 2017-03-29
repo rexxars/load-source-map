@@ -1,0 +1,12 @@
+"use strict";
+
+module.exports = function callAtDepth(depth, fn) {
+  var current = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
+  if (current < depth) {
+    return callAtDepth(depth, fn, current + 1);
+  }
+
+  return fn();
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy91dGlsL2NhbGxBdERlcHRoLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJjYWxsQXREZXB0aCIsImRlcHRoIiwiZm4iLCJjdXJyZW50Il0sIm1hcHBpbmdzIjoiOztBQUFBQSxPQUFPQyxPQUFQLEdBQWlCLFNBQVNDLFdBQVQsQ0FBc0JDLEtBQXRCLEVBQTZCQyxFQUE3QixFQUE4QztBQUFBLE1BQWJDLE9BQWEsdUVBQUgsQ0FBRzs7QUFDN0QsTUFBSUEsVUFBVUYsS0FBZCxFQUFxQjtBQUNuQixXQUFPRCxZQUFZQyxLQUFaLEVBQW1CQyxFQUFuQixFQUF1QkMsVUFBVSxDQUFqQyxDQUFQO0FBQ0Q7O0FBRUQsU0FBT0QsSUFBUDtBQUNELENBTkQiLCJmaWxlIjoiY2FsbEF0RGVwdGguanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIGNhbGxBdERlcHRoIChkZXB0aCwgZm4sIGN1cnJlbnQgPSAwKSB7XG4gIGlmIChjdXJyZW50IDwgZGVwdGgpIHtcbiAgICByZXR1cm4gY2FsbEF0RGVwdGgoZGVwdGgsIGZuLCBjdXJyZW50ICsgMSlcbiAgfVxuXG4gIHJldHVybiBmbigpXG59XG4iXX0=
