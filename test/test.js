@@ -15,22 +15,22 @@ test('should give back undefined as result if no sourcemap is referenced', funct
 })
 
 test('should handle inline sourcemaps', function (t) {
-  loadSourceMap(path.join(FIXTURES_DIR, 'lib-inline', 'util', 'generateError.js'), function (err, sourcemap) {
+  loadSourceMap(path.join(FIXTURES_DIR, 'lib-inline', 'example.js'), function (err, sourcemap) {
     t.ifError(err, 'should not error')
 
-    var generated = {line: 8, column: 58}
-    var expected = {line: 1, column: 29, name: null, source: '../../src/util/generateError.js'}
+    var generated = {line: 30, column: 13}
+    var expected = {line: 15, column: 9, name: 'setState', source: '../src/example.js'}
     t.deepEqual(sourcemap.originalPositionFor(generated), expected, 'should have correct source mapping')
     t.end()
   })
 })
 
 test('should handle external sourcemaps', function (t) {
-  loadSourceMap(path.join(FIXTURES_DIR, 'lib', 'util', 'generateError.js'), function (err, sourcemap) {
+  loadSourceMap(path.join(FIXTURES_DIR, 'lib', 'example.js'), function (err, sourcemap) {
     t.ifError(err, 'should not error')
 
-    var generated = {line: 8, column: 58}
-    var expected = {line: 1, column: 29, name: null, source: '../../src/util/generateError.js'}
+    var generated = {line: 30, column: 13}
+    var expected = {line: 15, column: 9, name: 'setState', source: '../src/example.js'}
     t.deepEqual(sourcemap.originalPositionFor(generated), expected, 'should have correct source mapping')
     t.end()
   })
