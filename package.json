@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Reads a source file and extracts a sourcemap for consumption (inline or external)",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">= 8"
+  },
   "scripts": {
     "test": "tape test/test.js && standard",
-    "prepublish": "in-publish && npm test || not-in-publish",
+    "prepublishOnly": "npm test",
     "coverage": "nyc --reporter text --reporter lcov tape test/test.js"
   },
   "repository": {
@@ -23,14 +26,12 @@
   },
   "homepage": "https://github.com/rexxars/load-source-map#readme",
   "dependencies": {
-    "in-publish": "^2.0.0",
-    "semver": "^5.3.0",
-    "source-map": "^0.5.6"
+    "source-map": "^0.7.3"
   },
   "devDependencies": {
-    "nyc": "^10.2.0",
-    "standard": "^9.0.2",
-    "tape": "^4.6.3"
+    "nyc": "^15.1.0",
+    "standard": "^14.3.4",
+    "tape": "^5.0.1"
   },
   "standard": {
     "ignore": [
