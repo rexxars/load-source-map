@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/rexxars/load-source-map#readme",
   "dependencies": {
-    "source-map": "^0.7.3"
+    "source-map": "^0.8.0-beta.0"
   },
   "devDependencies": {
     "nyc": "^15.1.0",
