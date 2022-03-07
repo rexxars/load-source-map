@@ -1,10 +1,10 @@
 'use strict'
 
-var path = require('path')
-var test = require('tape')
-var loadSourceMap = require('../')
+const path = require('path')
+const test = require('tape')
+const loadSourceMap = require('../')
 
-var FIXTURES_DIR = path.join(__dirname, 'fixtures')
+const FIXTURES_DIR = path.join(__dirname, 'fixtures')
 
 test('should give back undefined as result if no sourcemap is referenced', function (t) {
   loadSourceMap(path.join(FIXTURES_DIR, 'noSourcemap.js'), function (err, sourcemap) {
@@ -18,8 +18,8 @@ test('should handle inline sourcemaps', function (t) {
   loadSourceMap(path.join(FIXTURES_DIR, 'lib-inline', 'example.js'), function (err, sourcemap) {
     t.ifError(err, 'should not error')
 
-    var generated = { line: 30, column: 13 }
-    var expected = { line: 15, column: 9, name: 'setState', source: '../src/example.js' }
+    const generated = { line: 30, column: 13 }
+    const expected = { line: 15, column: 9, name: 'setState', source: '../src/example.js' }
     t.deepEqual(sourcemap.originalPositionFor(generated), expected, 'should have correct source mapping')
     t.end()
   })
@@ -29,8 +29,8 @@ test('should handle external sourcemaps', function (t) {
   loadSourceMap(path.join(FIXTURES_DIR, 'lib', 'example.js'), function (err, sourcemap) {
     t.ifError(err, 'should not error')
 
-    var generated = { line: 30, column: 13 }
-    var expected = { line: 15, column: 9, name: 'setState', source: '../src/example.js' }
+    const generated = { line: 30, column: 13 }
+    const expected = { line: 15, column: 9, name: 'setState', source: '../src/example.js' }
     t.deepEqual(sourcemap.originalPositionFor(generated), expected, 'should have correct source mapping')
     t.end()
   })
