@@ -1,6 +1,6 @@
 {
   "name": "load-source-map",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Reads a source file and extracts a sourcemap for consumption (inline or external)",
   "main": "lib/index.js",
   "engines": {
