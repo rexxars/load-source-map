@@ -19,6 +19,9 @@
     "sourcemap",
     "stacktrace"
   ],
+  "files": [
+    "lib"
+  ],
   "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
   "license": "MIT",
   "bugs": {
