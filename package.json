@@ -4,7 +4,7 @@
   "description": "Reads a source file and extracts a sourcemap for consumption (inline or external)",
   "main": "lib/index.js",
   "engines": {
-    "node": ">= 8"
+    "node": ">=12"
   },
   "scripts": {
     "test": "tape test/test.js && standard",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "nyc": "^15.1.0",
-    "standard": "^14.3.4",
-    "tape": "^5.0.1"
+    "standard": "^16.0.4",
+    "tape": "^5.5.2"
   },
   "standard": {
     "ignore": [
